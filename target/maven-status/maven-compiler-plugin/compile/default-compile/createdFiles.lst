@@ -1,0 +1,15 @@
+actions\SelectDrownDropListText.class
+navigation\PaginaGoogle.class
+actions\SelectDrownDropListValue.class
+taks\RegistrarUsuarioTask.class
+navigation\NavigateTo.class
+ui\Authentication\FormularioAuthentication.class
+ui\FormularioCreateAccount.class
+taks\IngresarEmailRegistro.class
+ui\FormularioPaginaPrincipal.class
+navigation\PaginaPrincipal.class
+questions\SignOutVisibleQuestion.class
+ui\Authentication\FormularioRegistered.class
+ui\Authentication\FormularioCreate.class
+questions\PaginaPrincipalQuestion.class
+taks\IniciarSesionTask.class

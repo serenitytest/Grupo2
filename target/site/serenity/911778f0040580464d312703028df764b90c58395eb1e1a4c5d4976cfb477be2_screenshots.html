@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="59452ec45544cb57bd6e3fefcfc0f5b461950cb0b8078024f1e7afd7aac9e1b8.html">Funcionalidad De Registrar Usuario</a></span>
+                > <span class="truncate-60"><a
+                    href="911778f0040580464d312703028df764b90c58395eb1e1a4c5d4976cfb477be2.html">Registracion usuario exitosa </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 14-12-2020 18:29</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Funcionalidad De Registrar Usuario </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="5d1f8eed468a80365122076ce79c6abf4cf224f2dbfd7e44dfa59a69675f8754.html">Registrar Usuario
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Registracion usuario exitosa
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado en la pagina principal para registrarme<br>Cuando ingreso el mail &lt;correo&gt; para registarme como usuario nuevo<br>Y cargo los datos &lt;title&gt;, &lt;firstName&gt;, &lt;lastName&gt;, &lt;correo&gt;, &lt;password&gt;, &lt;dayBirth&gt;, &lt;monthBirth&gt;, &lt;yearBirth&gt;, &lt;sign&gt;, &lt;receive&gt;, &lt;firtsAddress&gt;, &lt;lastAddress&gt;, &lt;company&gt;, &lt;address&gt;, &lt;addressDos&gt;, &lt;city&gt;, &lt;state&gt;, &lt;postalCode&gt;, &lt;country&gt;, &lt;additionalInformation&gt;, &lt;homePhone&gt;, &lt;mobilePhone&gt;<br>Entonces observo que inicie sesion con &lt;firstName&gt;, &lt;lastName&gt;</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="9ddccfb4af810b93e66d785f4ff218f754b338049b195d33851aa25fbdc46a7c.png" title=" Example: {correo=&quot;testing.claro@ggggmail.com&quot;, title=&quot;Mr.&quot;, firstName=&quot;Testing&quot;, lastName=&quot;Claro&quot;, password=&quot;Testing123&quot;, dayBirth=&quot;11&quot;, monthBirth=&quot;May &quot;, yearBirth=&quot;2000&quot;, sign=&quot;Si&quot;, receive=&quot;No&quot;, firtsAddress=&quot;Falsa&quot;, lastAddress=&quot;Super Falsa&quot;, company=&quot;Anonima&quot;, address=&quot;Siempre viva 123&quot;, addressDos=&quot;&quot;, city=&quot;Cordoba&quot;, state=&quot;Texas&quot;, postalCode=&quot;75001&quot;, country=&quot;United States&quot;, additionalInformation=&quot;Nada mas&quot;, homePhone=&quot;123441231&quot;, mobilePhone=&quot;124123123124&quot;}" width="1360"/>
+                <img src="9ddccfb4af810b93e66d785f4ff218f754b338049b195d33851aa25fbdc46a7c.png" title=" Dado en la pagina principal para registrarme" width="1360"/>
+                <img src="9ddccfb4af810b93e66d785f4ff218f754b338049b195d33851aa25fbdc46a7c.png" title=" Roberto Carlos abre la pagina principal Your Logo" width="1360"/>
+                <img src="9ddccfb4af810b93e66d785f4ff218f754b338049b195d33851aa25fbdc46a7c.png" title=" Roberto Carlos opens the Pagina principal" width="1360"/>
+                <img src="9ddccfb4af810b93e66d785f4ff218f754b338049b195d33851aa25fbdc46a7c.png" title=" Roberto Carlos abre la pagina principal Your Logo (completed)" width="1360"/>
+                <img src="9ddccfb4af810b93e66d785f4ff218f754b338049b195d33851aa25fbdc46a7c.png" title=" Dado en la pagina principal para registrarme (completed)" width="1360"/>
+                <img src="9ddccfb4af810b93e66d785f4ff218f754b338049b195d33851aa25fbdc46a7c.png" title=" Cuando ingreso el mail &quot;testing.claro@ggggmail.com&quot; para registarme como usuario nuevo" width="1360"/>
+                <img src="9ddccfb4af810b93e66d785f4ff218f754b338049b195d33851aa25fbdc46a7c.png" title=" Roberto Carlos clicks on Boton para ir al formulario de login" width="1360"/>
+                <img src="295df416133239ef4636d1e2eac906e24eb536eb9eb4cda4618ed413f4c15cf5.png" title=" Roberto Carlos clicks on Boton para ir al formulario de login (completed)" width="1360"/>
+                <img src="295df416133239ef4636d1e2eac906e24eb536eb9eb4cda4618ed413f4c15cf5.png" title=" Roberto Carlos enters 'testing.claro@ggggmail.com' into Textbox ingreso de mail para registrar" width="1360"/>
+                <img src="8573aeae351950dbababa8499598680998cc40bac5102c2afffe65f777eb60b0.png" title=" Roberto Carlos enters 'testing.claro@ggggmail.com' into Textbox ingreso de mail para registrar (completed)" width="1360"/>
+                <img src="8573aeae351950dbababa8499598680998cc40bac5102c2afffe65f777eb60b0.png" title=" Roberto Carlos clicks on Button para comenza el registro" width="1360"/>
+                <img src="1f8fc6823ee41a54efd9fbab5720aed33264881a97626da534dac61ee058b3a9.png" title=" Roberto Carlos clicks on Button para comenza el registro (completed)" width="1360"/>
+                <img src="1f8fc6823ee41a54efd9fbab5720aed33264881a97626da534dac61ee058b3a9.png" title=" Cuando ingreso el mail &quot;testing.claro@ggggmail.com&quot; para registarme como usuario nuevo (completed)" width="1360"/>
+                <img src="1f8fc6823ee41a54efd9fbab5720aed33264881a97626da534dac61ee058b3a9.png" title=" Y cargo los datos &quot;Mr.&quot;, &quot;Testing&quot;, &quot;Claro&quot;, &quot;testing.claro@ggggmail.com&quot;, &quot;Testing123&quot;, &quot;11&quot;, &quot;May &quot;, &quot;2000&quot;, &quot;Si&quot;, &quot;No&quot;, &quot;Falsa&quot;, &quot;Super Falsa&quot;, &quot;Anonima&quot;, &quot;Siempre viva 123&quot;, &quot;&quot;, &quot;Cordoba&quot;, &quot;Texas&quot;, &quot;75001&quot;, &quot;United States&quot;, &quot;Nada mas&quot;, &quot;123441231&quot;, &quot;124123123124&quot;" width="1360"/>
+                <img src="1f8fc6823ee41a54efd9fbab5720aed33264881a97626da534dac61ee058b3a9.png" title=" Roberto Carlos clicks on RadioButton para seleccionar el genero Mr." width="1360"/>
+                <img src="561f2e8fd3cb88459ae8ae0ce7d0ab24a2f0c7b092152d7a4ffe9b367eafc406.png" title=" Roberto Carlos clicks on RadioButton para seleccionar el genero Mr. (completed)" width="1360"/>
+                <img src="561f2e8fd3cb88459ae8ae0ce7d0ab24a2f0c7b092152d7a4ffe9b367eafc406.png" title=" Roberto Carlos enters 'Testing' into Textbox para ingresar el primer nombre" width="1360"/>
+                <img src="2a0be3f249fa8908d03a76078500a5525d16879ed662612c5373bfbd64d50f0c.png" title=" Roberto Carlos enters 'Testing' into Textbox para ingresar el primer nombre (completed)" width="1360"/>
+                <img src="2a0be3f249fa8908d03a76078500a5525d16879ed662612c5373bfbd64d50f0c.png" title=" Roberto Carlos enters 'Claro' into Textbox para ingresar el apellido" width="1360"/>
+                <img src="9b248d6e45f495b6147c5acadb2635556c5f3215ee897831f1411634912aed3b.png" title=" Roberto Carlos enters 'Claro' into Textbox para ingresar el apellido (completed)" width="1360"/>
+                <img src="9b248d6e45f495b6147c5acadb2635556c5f3215ee897831f1411634912aed3b.png" title=" Roberto Carlos enters 'testing.claro@ggggmail.com' into Textbox para ingresar el email" width="1360"/>
+                <img src="aced1064e4737caca674b3070332ef32014312b9a25719c47fb6a9ad1040615a.png" title=" Roberto Carlos enters 'testing.claro@ggggmail.com' into Textbox para ingresar el email (completed)" width="1360"/>
+                <img src="aced1064e4737caca674b3070332ef32014312b9a25719c47fb6a9ad1040615a.png" title=" Roberto Carlos enters 'Testing123' into Textbox para ingresar el password" width="1360"/>
+                <img src="4fb7e1b0fb8c522eccdd51c5af51f21cefd8b51556a2707c66c282a8ee79421d.png" title=" Roberto Carlos enters 'Testing123' into Textbox para ingresar el password (completed)" width="1360"/>
+                <img src="4fb7e1b0fb8c522eccdd51c5af51f21cefd8b51556a2707c66c282a8ee79421d.png" title=" Roberto Carlos selecciona 11 en Dropdoplist para seleccionar el dia de nacimiento" width="1360"/>
+                <img src="8e5fc7c6be26931268a22ada72974c6a2d614de1317054035a55a111c35b0aaf.png" title=" Roberto Carlos selecciona 11 en Dropdoplist para seleccionar el dia de nacimiento (completed)" width="1360"/>
+                <img src="8e5fc7c6be26931268a22ada72974c6a2d614de1317054035a55a111c35b0aaf.png" title=" Roberto Carlos selecciona May  en Dropdoplist para seleccionar el mes de nacimiento" width="1360"/>
+                <img src="95a49af9cf3a4d2d78e1c9f70b835757ad3fa1da5c675cccef78c71cef637114.png" title=" Roberto Carlos selecciona May  en Dropdoplist para seleccionar el mes de nacimiento (completed)" width="1360"/>
+                <img src="95a49af9cf3a4d2d78e1c9f70b835757ad3fa1da5c675cccef78c71cef637114.png" title=" Roberto Carlos selecciona 2000 en Dropdoplist para seleccionar el a&ntilde;o de nacimiento" width="1360"/>
+                <img src="eb88fab351e76b6d8243572c9eb37cc84117cc703aa1453b142830ef56fa883f.png" title=" Roberto Carlos selecciona 2000 en Dropdoplist para seleccionar el a&ntilde;o de nacimiento (completed)" width="1360"/>
+                <img src="eb88fab351e76b6d8243572c9eb37cc84117cc703aa1453b142830ef56fa883f.png" title=" Roberto Carlos enters 'Falsa' into Textbox para ingresar el nombre de la calle" width="1360"/>
+                <img src="16655eb5c7911ba00d660001f2b818803e7ce141e44b3a82bae87fbac1606b8b.png" title=" Roberto Carlos enters 'Falsa' into Textbox para ingresar el nombre de la calle (completed)" width="1360"/>
+                <img src="16655eb5c7911ba00d660001f2b818803e7ce141e44b3a82bae87fbac1606b8b.png" title=" Roberto Carlos enters 'Super Falsa' into Textbox para ingresar el apellido de la calle" width="1360"/>
+                <img src="bc873dd64b20a2c2c2f26936b4e6d69c4072c882b652bb2a5492db7221dfef8f.png" title=" Roberto Carlos enters 'Super Falsa' into Textbox para ingresar el apellido de la calle (completed)" width="1360"/>
+                <img src="bc873dd64b20a2c2c2f26936b4e6d69c4072c882b652bb2a5492db7221dfef8f.png" title=" Roberto Carlos enters 'Anonima' into Textbox para ingresar el nombre de la compa&ntilde;ia" width="1360"/>
+                <img src="63ace36b7931b068e07fe1373d110ee904192c3328285706b0138caece81b22c.png" title=" Roberto Carlos enters 'Anonima' into Textbox para ingresar el nombre de la compa&ntilde;ia (completed)" width="1360"/>
+                <img src="63ace36b7931b068e07fe1373d110ee904192c3328285706b0138caece81b22c.png" title=" Roberto Carlos enters 'Siempre viva 123' into Textbox para ingresar la direccion" width="1360"/>
+                <img src="233fd5c637c324dbb40ba9607cced6c23851fbb47fc54201f57d024746d027b4.png" title=" Roberto Carlos enters 'Siempre viva 123' into Textbox para ingresar la direccion (completed)" width="1360"/>
+                <img src="233fd5c637c324dbb40ba9607cced6c23851fbb47fc54201f57d024746d027b4.png" title=" Roberto Carlos enters '' into Textbox para ingresar la direccion" width="1360"/>
+                <img src="c095aee6c4707a687e348f7259c166450ba4188ca3131c3a550072c58747ae8e.png" title=" Roberto Carlos enters '' into Textbox para ingresar la direccion (completed)" width="1360"/>
+                <img src="c095aee6c4707a687e348f7259c166450ba4188ca3131c3a550072c58747ae8e.png" title=" Roberto Carlos enters 'Cordoba' into Textbox para ingresar la ciudad" width="1360"/>
+                <img src="df9dd307c72ebf7b9542a5e0513d6b11cc3ed9187a4e20c94a4d2c1bf6df9cf7.png" title=" Roberto Carlos enters 'Cordoba' into Textbox para ingresar la ciudad (completed)" width="1360"/>
+                <img src="df9dd307c72ebf7b9542a5e0513d6b11cc3ed9187a4e20c94a4d2c1bf6df9cf7.png" title=" Roberto Carlos selecciona Texas en Dropdoplist para seleccionar el estado" width="1360"/>
+                <img src="b5d9dec9b7b9ace1b4204f0a8b9ca5282bf1a7c8616efe4a6561a848e391b4c7.png" title=" Roberto Carlos selecciona Texas en Dropdoplist para seleccionar el estado (completed)" width="1360"/>
+                <img src="b5d9dec9b7b9ace1b4204f0a8b9ca5282bf1a7c8616efe4a6561a848e391b4c7.png" title=" Roberto Carlos enters '75001' into Textbox para ingresar el codigo postal" width="1360"/>
+                <img src="517fb082935f715e333a931324b487acb1abb47d3d20e18ddec381b8020c89d1.png" title=" Roberto Carlos enters '75001' into Textbox para ingresar el codigo postal (completed)" width="1360"/>
+                <img src="517fb082935f715e333a931324b487acb1abb47d3d20e18ddec381b8020c89d1.png" title=" Roberto Carlos selecciona 21 en Dropdoplist para seleccionar el country" width="1360"/>
+                <img src="517fb082935f715e333a931324b487acb1abb47d3d20e18ddec381b8020c89d1.png" title=" Roberto Carlos selecciona 21 en Dropdoplist para seleccionar el country (completed)" width="1360"/>
+                <img src="517fb082935f715e333a931324b487acb1abb47d3d20e18ddec381b8020c89d1.png" title=" Roberto Carlos enters 'Nada mas' into Textbox para ingresar informacion adicional" width="1360"/>
+                <img src="aa5e13393b7e627acfec06bad5b610df823c1f5cf96c2cc39e7d9bcc1af8dda7.png" title=" Roberto Carlos enters 'Nada mas' into Textbox para ingresar informacion adicional (completed)" width="1360"/>
+                <img src="aa5e13393b7e627acfec06bad5b610df823c1f5cf96c2cc39e7d9bcc1af8dda7.png" title=" Roberto Carlos enters '123441231' into Textbox para ingresar el numero de su hogar" width="1360"/>
+                <img src="91942a5f4cb92e887950442cc4778ac9403702fafc036d5648ec4b9d5324da58.png" title=" Roberto Carlos enters '123441231' into Textbox para ingresar el numero de su hogar (completed)" width="1360"/>
+                <img src="91942a5f4cb92e887950442cc4778ac9403702fafc036d5648ec4b9d5324da58.png" title=" Roberto Carlos enters '124123123124' into Textbox para ingresar el numero de celular" width="1360"/>
+                <img src="042b6216b4997120ce5eacd93ca20eea786ddc97a171120beafd15f788c621d7.png" title=" Roberto Carlos enters '124123123124' into Textbox para ingresar el numero de celular (completed)" width="1360"/>
+                <img src="042b6216b4997120ce5eacd93ca20eea786ddc97a171120beafd15f788c621d7.png" title=" Roberto Carlos enters '0.7679812171760269' into Textbox para ingresar el alias" width="1360"/>
+                <img src="ec0bd0e864478ba3c87003f2af708fe612b773c18f3b53715754cd56c57f691e.png" title=" Roberto Carlos enters '0.7679812171760269' into Textbox para ingresar el alias (completed)" width="1360"/>
+                <img src="ec0bd0e864478ba3c87003f2af708fe612b773c18f3b53715754cd56c57f691e.png" title=" Roberto Carlos clicks on Button para finalizar la registracion" width="1360"/>
+                <img src="3bc42f8e0d61eb0087e8ed1d9ecaf146bbec4cf7dee3f688ef91aca87348362d.png" title=" Roberto Carlos clicks on Button para finalizar la registracion (completed)" width="1360"/>
+                <img src="3bc42f8e0d61eb0087e8ed1d9ecaf146bbec4cf7dee3f688ef91aca87348362d.png" title=" Y cargo los datos &quot;Mr.&quot;, &quot;Testing&quot;, &quot;Claro&quot;, &quot;testing.claro@ggggmail.com&quot;, &quot;Testing123&quot;, &quot;11&quot;, &quot;May &quot;, &quot;2000&quot;, &quot;Si&quot;, &quot;No&quot;, &quot;Falsa&quot;, &quot;Super Falsa&quot;, &quot;Anonima&quot;, &quot;Siempre viva 123&quot;, &quot;&quot;, &quot;Cordoba&quot;, &quot;Texas&quot;, &quot;75001&quot;, &quot;United States&quot;, &quot;Nada mas&quot;, &quot;123441231&quot;, &quot;124123123124&quot; (completed)" width="1360"/>
+                <img src="3bc42f8e0d61eb0087e8ed1d9ecaf146bbec4cf7dee3f688ef91aca87348362d.png" title=" Entonces observo que inicie sesion con &quot;Testing&quot;, &quot;Claro&quot;" width="1360"/>
+                <img src="3bc42f8e0d61eb0087e8ed1d9ecaf146bbec4cf7dee3f688ef91aca87348362d.png" title=" Then El nombre del usuario que recien se registra como que inicio la sesion should be 'Testing Claro'" width="1360"/>
+                <img src="3bc42f8e0d61eb0087e8ed1d9ecaf146bbec4cf7dee3f688ef91aca87348362d.png" title=" Then El nombre del usuario que recien se registra como que inicio la sesion should be 'Testing Claro' (completed)" width="1360"/>
+                <img src="3bc42f8e0d61eb0087e8ed1d9ecaf146bbec4cf7dee3f688ef91aca87348362d.png" title=" Then El boton Sign Out esta visible should be (true)" width="1360"/>
+                <img src="3bc42f8e0d61eb0087e8ed1d9ecaf146bbec4cf7dee3f688ef91aca87348362d.png" title=" Then El boton Sign Out esta visible should be (true) (completed)" width="1360"/>
+                <img src="3bc42f8e0d61eb0087e8ed1d9ecaf146bbec4cf7dee3f688ef91aca87348362d.png" title=" Entonces observo que inicie sesion con &quot;Testing&quot;, &quot;Claro&quot; (completed)" width="1360"/>
+                <img src="3bc42f8e0d61eb0087e8ed1d9ecaf146bbec4cf7dee3f688ef91aca87348362d.png" title=" Example: {correo=&quot;testing.claro@ggggmail.com&quot;, title=&quot;Mr.&quot;, firstName=&quot;Testing&quot;, lastName=&quot;Claro&quot;, password=&quot;Testing123&quot;, dayBirth=&quot;11&quot;, monthBirth=&quot;May &quot;, yearBirth=&quot;2000&quot;, sign=&quot;Si&quot;, receive=&quot;No&quot;, firtsAddress=&quot;Falsa&quot;, lastAddress=&quot;Super Falsa&quot;, company=&quot;Anonima&quot;, address=&quot;Siempre viva 123&quot;, addressDos=&quot;&quot;, city=&quot;Cordoba&quot;, state=&quot;Texas&quot;, postalCode=&quot;75001&quot;, country=&quot;United States&quot;, additionalInformation=&quot;Nada mas&quot;, homePhone=&quot;123441231&quot;, mobilePhone=&quot;124123123124&quot;} (completed): <span class='success-color'>SUCCESS</span>" width="1360"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.7</span>
+</div>
+</body>
+</html>
